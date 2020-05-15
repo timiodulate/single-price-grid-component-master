@@ -1,0 +1,172 @@
+/* Global Resets */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Karla', sans-serif;
+
+    --bg: hsl(179, 62%, 43%);
+    --button: hsl(71, 73%, 54%);
+    --grey-text: hsl(204, 43%, 93%);
+    --text: hsl(218, 22%, 67%);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    background-color: var(--grey-text);
+}
+
+
+
+/* container  */
+.container {
+    margin: 0 auto;
+    border-radius: .5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: var(--grey-text) 0 3px 3px;
+    width: 50%;
+    background-color: white;
+}
+.container .card {
+    padding: 40px;
+}
+
+.container .join {
+    grid-column: 1/3;
+}
+.container .join h2{
+    color: var(--bg);
+    margin-bottom: 20px;
+}
+.container .join h4{
+    color: var(--button);
+    margin-bottom: 15px;
+}
+.container .join p{
+    line-height: 25px;
+    color: var(--text);
+    font-size: .9rem;
+}
+
+.container .sub{
+    background-color: var(--bg);
+    border-radius: 0 0 0 .5rem;
+}
+.container .sub h4{
+    margin-bottom: 20px;
+    color: white;
+}
+.container .sub #price{
+    font-size: .8rem;
+    color: var(--grey-text);
+    margin-bottom: 10px;
+}
+.container .sub #price span {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.container .sub #access {
+    color: var(--grey-text);
+    margin-bottom: 30px;
+    font-size: .9rem;
+}
+.container .sub button {
+    cursor: pointer;
+    padding: 15px;
+    border: none;
+    border-radius: .2rem;
+    color: var(--grey-text);
+    background-color: var(--button);
+    width: 100%;
+    /* font-size: 1.3rem; */
+}
+
+.container .whyUs {
+    background-color: hsl(179, 57%, 61%);
+    border-radius: 0 0 .5rem 0;
+}
+.container .whyUs h4{
+    color: white;
+    margin-bottom: 20px;
+}
+.container .whyUs p {
+    color: var(--grey-text);
+    line-height: 19px;
+    font-size: .8rem;
+}
+
+
+
+/* footer */
+.attribution { 
+    font-size: 13px; 
+    text-align: center; 
+    /* color: white; */
+    padding: 20px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+
+
+/* Media Queries - Responsiveness */
+/* LG - Large Screen */
+/* @media only screen and (max-width: 992px) {
+
+} */
+
+/* MD - Medium Screen */
+@media only screen and (max-width: 765px) {
+
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    
+        background-color: var(--grey-text);
+    }
+
+    .container {
+        border-radius: 0 0 .5rem .5rem;
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+
+    .container .card {
+        padding: 20px;
+    }
+    .container .join {
+        grid-column: 1/2;
+    }
+    .container .join h2 {
+        font-size: 1.4rem;
+    }
+    .container .sub{
+        border-radius: 0;
+    }
+    .container .whyUs {
+        border-radius: 0 0 .5rem .5rem;
+    }
+}
+
+/* SM - Small Screen */
+/* @media only screen and (max-width: 576px){
+
+} */
+
+
+/* @timiodulate css template */
